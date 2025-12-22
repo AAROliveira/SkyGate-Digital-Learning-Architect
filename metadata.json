@@ -1,0 +1,7 @@
+{
+  "name": "Skygate Digital Learning Architect",
+  "description": "An AI-augmented production engine that transforms raw content into high-fidelity, interactive React-based Learning Objects with multi-stage pedagogical processing.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
