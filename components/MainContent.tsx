@@ -56,7 +56,7 @@ const Overview: React.FC<{ data: LearningObject, isEditing: boolean, onUpdate: (
             <input 
               value={data.title} 
               onChange={(e) => onUpdate({ title: e.target.value })}
-              className="text-center w-full bg-sky-50 border-b-2 border-sky-500 focus:ring-0 outline-none p-2 rounded"
+              className="text-center w-full bg-sky-50 border-b-2 border-sky-500 focus:ring-0 outline-none p-2 rounded text-black"
             />
           ) : `Expertise in ${data.title}`}
         </h2>
@@ -64,7 +64,7 @@ const Overview: React.FC<{ data: LearningObject, isEditing: boolean, onUpdate: (
           <div className="flex items-center gap-1">
             <Clock className="w-4 h-4" />
             {isEditing ? (
-              <input value={data.estimatedTime} onChange={e => onUpdate({ estimatedTime: e.target.value })} className="w-20 bg-slate-50 border-b border-sky-500 outline-none text-center" />
+              <input value={data.estimatedTime} onChange={e => onUpdate({ estimatedTime: e.target.value })} className="w-20 bg-slate-50 border-b border-sky-500 outline-none text-center text-black" />
             ) : data.estimatedTime}
           </div>
           <span>•</span>
@@ -93,7 +93,7 @@ const Overview: React.FC<{ data: LearningObject, isEditing: boolean, onUpdate: (
                         next[i] = e.target.value;
                         onUpdate({ objectives: next });
                       }}
-                      className="flex-1 bg-slate-50 text-sm p-1 rounded border-b border-transparent focus:border-sky-500 outline-none"
+                      className="flex-1 bg-slate-50 text-sm p-1 rounded border-b border-transparent focus:border-sky-500 outline-none text-black"
                     />
                     <button onClick={() => onUpdate({ objectives: data.objectives.filter((_, j) => j !== i) })} className="text-rose-400 hover:text-rose-600"><Trash2 className="w-4 h-4" /></button>
                   </div>
@@ -118,7 +118,7 @@ const Overview: React.FC<{ data: LearningObject, isEditing: boolean, onUpdate: (
                    <input 
                     value={data.level} 
                     onChange={(e) => onUpdate({ level: e.target.value })}
-                    className="w-12 text-center bg-sky-50 border-b border-sky-500 outline-none"
+                    className="w-12 text-center bg-sky-50 border-b border-sky-500 outline-none text-black"
                    />
                 </div>
               ) : `CEFR LEVEL ${data.level}`}
@@ -465,7 +465,7 @@ const AILab: React.FC<{ scenario: any, isEditing: boolean, onUpdate: (s: any) =>
             onKeyDown={e => e.key === 'Enter' && sendMessage()} 
             placeholder="Engage with the Neural Agent..." 
             disabled={isEvaluating}
-            className="flex-1 bg-slate-100 border-none rounded-2xl px-8 py-5 focus:ring-2 focus:ring-sky-500 outline-none transition-all font-semibold text-slate-800" 
+            className="flex-1 bg-slate-100 border-none rounded-2xl px-8 py-5 focus:ring-2 focus:ring-sky-500 outline-none transition-all font-semibold text-black" 
           />
           <button 
             onClick={sendMessage} 

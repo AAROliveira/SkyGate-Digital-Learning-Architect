@@ -150,7 +150,7 @@ const App: React.FC = () => {
               <input 
                 value={learningObject?.title} 
                 onChange={(e) => updateLearningObject({ title: e.target.value })}
-                className="text-xl font-bold text-slate-800 border-b-2 border-sky-500 outline-none bg-sky-50 px-2"
+                className="text-xl font-bold text-black border-b-2 border-sky-500 outline-none bg-sky-50 px-2"
               />
             ) : (
               <h1 className="text-xl font-bold text-slate-800 truncate max-w-md">

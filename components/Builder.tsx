@@ -21,7 +21,7 @@ const Builder: React.FC<BuilderProps> = ({ onSubmit }) => {
       <nav className="h-20 border-b bg-white/80 backdrop-blur-xl sticky top-0 z-50 px-8 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center shadow-lg shadow-slate-200">
-            <GraduationCap className="text-white w-6 h-6" />
+            < GraduationCap className="text-white w-6 h-6" />
           </div>
           <span className="font-black text-xl tracking-tight text-slate-900">SKYGATE</span>
         </div>
@@ -57,7 +57,7 @@ const Builder: React.FC<BuilderProps> = ({ onSubmit }) => {
               value={input}
               onChange={e => setInput(e.target.value)}
               placeholder="Paste text notes, curriculum, or a topic..."
-              className="flex-1 px-8 py-7 rounded-[2rem] bg-slate-50 border-none focus:ring-4 focus:ring-sky-100 outline-none text-lg font-semibold transition-all placeholder:text-slate-400"
+              className="flex-1 px-8 py-7 rounded-[2rem] bg-slate-50 border-none focus:ring-4 focus:ring-sky-100 outline-none text-lg font-semibold transition-all placeholder:text-slate-400 text-black"
             />
             <button 
               onClick={() => input.trim() && onSubmit(input)}
